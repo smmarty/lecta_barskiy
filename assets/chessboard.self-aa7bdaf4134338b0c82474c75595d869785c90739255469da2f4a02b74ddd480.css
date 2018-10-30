@@ -315,7 +315,7 @@ body {
   padding: 3px 5px;
   width: 100%;*/
 }
-
+/*
 .chessBoard__player .chessBoard__moveVariation:before {
   content: ' (';
 }
@@ -323,7 +323,7 @@ body {
 .chessBoard__player .chessBoard__moveVariation:after {
   content: ') ';
 }
-
+*/
 .chessBoard__player .chessBoard__history {
   padding-left: 20px;
   max-height: 500px;
