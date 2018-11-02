@@ -55,5 +55,5 @@
     }
   });
 
-  window.swapMoves([['v2', 'm7']]);
+  window.swapMoves([['v2', 'm7'], ['#chessBoard__move2 .chessBoard__moveComment:last-child', 'v4']]);
 })();

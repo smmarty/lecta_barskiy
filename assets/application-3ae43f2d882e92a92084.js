@@ -2812,7 +2812,12 @@ window.loadPlayer = function (params) {
 
 window.swapMoves = function (moves) {
   function getSelector(move) {
-    return move.startsWith('m') ? '#chessBoard__move' + move.slice(1) : '.chessBoard__moveVariation' + move.slice(1);
+    if (move.startsWith('m')) {
+      return '#chessBoard__move' + move.slice(1);
+    } else if (move.startsWith('v')) {
+      return '.chessBoard__moveVariation' + move.slice(1);
+    }
+    return move;
   }
   for (var i = 0; i < moves.length; i++) {
     var m1 = getSelector(moves[i][0]),
@@ -19981,4 +19986,4 @@ return jQuery;
 /***/ })
 
 /******/ });
-//# sourceMappingURL=application-88042b1f5762b18465ec.js.map
+//# sourceMappingURL=application-fa7459675f0a7817d195.js.map
