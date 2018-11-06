@@ -21,7 +21,7 @@
     '{ Не спасает и } 1.Rb3 Kc4 2.Rc3+ Kxb4 3.Rxc6 Rc4+! 4.Rxc4+ Kxc4 {. <br/>}' +
     '{Что же делать? Надо менять ладьи, но на своих условиях! }' +
   ') ' +
-'1...Rxd3+ 2.Kxd3 Ke5 3.Ke3 Kf5 4.Kf3 { Оттеснить белого короля не удаётся, а после } 4...Ke5 5.Ke3 Kd5 6.Kd3 c5 7.bxc5 Kxc5 8.Kc3 { получается ничья. }  *';
+'1...Rxd3+ 2.Kxd3 Ke5 3.Ke3 Kf5 4.Kf3 {. Оттеснить белого короля не удаётся, а после } 4...Ke5 5.Ke3 Kd5 6.Kd3 c5 7.bxc5 Kxc5 8.Kc3 { получается ничья. }  *';
 
   window.loadPlayer({
     id: 1,
@@ -49,4 +49,6 @@
       }
     }
   });
+  window.swapMoves([['m0', 'v1']]);
+  document.querySelector('#chessBoard__move17 .moveNumber').remove();
 })();
