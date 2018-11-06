@@ -50,4 +50,6 @@
       }
     }
   });
+  window.swapMoves([['v4', 'm10']]);
+  document.querySelector('#chessBoard__move10 .moveNumber').remove();
 })();
