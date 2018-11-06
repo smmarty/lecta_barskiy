@@ -21,7 +21,7 @@
       '1.Kd5? { , то чёрные спасаются: } ' +
       '1...b5! 2.Kc5 Kc8! 3.Kxb5 Kb7! ' +
     ') ' +
-'1...Kd7 2.Kd5 Kc7 3.Ke6 ' +
+'1...Kd7 2.Kd5 Kc7 3.Ke6 {, &nbsp;}' +
 '{ и белые выигрывают точно так же как в предыдущем примере. }  *';
 
   window.loadPlayer({
@@ -50,4 +50,6 @@
       }
     }
   });
+  window.swapMoves([['m0', 'v1']]);
+  document.querySelector('#chessBoard__move7 .moveNumber').remove();
 })();
