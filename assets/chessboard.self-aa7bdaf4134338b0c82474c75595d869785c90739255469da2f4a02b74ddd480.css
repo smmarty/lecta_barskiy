@@ -469,3 +469,7 @@ html, body {
 .chessBoard__player .chessBoard__button {
   background-color: #FFFFFF;
 }
+
+.moveNotation {
+  white-space: nowrap;
+}
