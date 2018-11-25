@@ -10,28 +10,25 @@
 '[BlackElo ""]' +
 '[ECO ""]' +
 '[SetUp "1"]' +
-'[FEN "8/4p3/8/5P2/3k3P/8/8/1K6 w - - 0 1"]' +
-'[CurrentPosition "8/4K3/8/5k2/8/8/8/8 w - - 0 9"]' +
+'[FEN "8/3kP3/3P4/6p1/2p5/4K3/8/8 b - - 0 1"]' +
+'[CurrentPosition "8/3kP3/3P4/8/2K5/8/6p1/8 w - - 0 4"]' +
 ' ' +
-'1.f6! ' +
-  '(' +
-    ' { Чёрный король находится в квадрате пешки h4, и успевает её задержать после } ' +
-    '1.h5 Ke5 2.h6 Kf6 ' +
-    '{. Например: } ' +
-    '3.Kc2 Kf7 4.Kd3 Kg8 5.Ke4 Kh7 6.Ke5 Kxh6 7.Ke6 Kg5 8.Kxe7 Kxf5 ' +
-    '{ – ничья. Однако белые могут создать помеху на пути короля: } ' +
+'{ Две разрозненные проходные порой оказываются сильнее двух связанных. ' +
+'Король d7 легко удерживает неприятельские пешки, а ' +
+'белый монарх, который пока что находится в квадратах обеих пешек, ' +
+'вскоре начнёт разрываться } ' +
+'1...g4 2.Kd4 g3 3.Kxc4 ' +
+  '( ' +
+    '{. Отчаянный бросок к своим пешкам тоже не помогает: } ' +
+    '3.Ke5 g2 4.Kf6 g1=Q 5.Kf7 Qf2+ { , и чёрные выигрывают.} ' +
   ') ' +
-'1...exf6 2.h5 Ke5 ' +
-  '(' +
-    ' { Не помогает и } 2...f5 3.h6 f4 4.h7 f3 5.h8=Q+ ' +
-  ') ' +
-'3.h6 { , и пешка проскакивает в ферзи. }  *';
+'3...g2';
 
   window.loadPlayer({
     id: 1,
     player: {
       pgn: pgn,
-      title: 'Диаграмма 67-1',
+      title: 'Диаграмма 67-3',
       pawn_notation: 'short'
     }
   });
@@ -43,7 +40,7 @@
       } else if (node.className === 'chessBoard__moveComment') {
         var r = node.textContent.split('').reverse().join('');
         if (!node.textContent.startsWith(',') && !node.textContent.startsWith('.') && !node.textContent.startsWith(';') && !node.textContent.startsWith(':') && !node.textContent.startsWith('!')) {
-          node.textContent = ' ' + node.textContent;
+          // node.textContent = ' ' + node.textContent;
         }
         if (!r.startsWith('.')) {
           node.textContent += ' ';
@@ -53,7 +50,6 @@
       }
     }
   });
-  window.swapMoves([['m0', 'v1']]);
-  document.querySelector('#chessBoard__move17 .moveNumber').remove();
-  window.swapMoves([['v20', 'm26']]);
+  window.swapMoves([['v4', 'm10']]);
+  document.querySelector('#chessBoard__move10 .moveNumber').remove();
 })();
