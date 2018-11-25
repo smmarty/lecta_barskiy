@@ -37,7 +37,7 @@
         node.textContent = ' ' + node.textContent;
       } else if (node.className === 'chessBoard__moveComment') {
         var r = node.textContent.split('').reverse().join('');
-        if (!node.textContent.startsWith(',') && !node.textContent.startsWith('.') && !node.textContent.startsWith(';') && !node.textContent.startsWith(':') && !node.textContent.startsWith('!')) {
+        if (!node.textContent.startsWith(')') && !node.textContent.startsWith(',') && !node.textContent.startsWith('.') && !node.textContent.startsWith(';') && !node.textContent.startsWith(':') && !node.textContent.startsWith('!')) {
           node.textContent = ' ' + node.textContent;
         }
         if (!r.startsWith('.')) {
