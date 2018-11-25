@@ -52,4 +52,5 @@
   });
 
   window.swapMoves([['m1','v2']]);
+  document.querySelector('#chessBoard__move4 .moveNumber').remove();
 })();
