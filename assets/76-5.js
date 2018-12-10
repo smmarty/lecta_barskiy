@@ -17,14 +17,14 @@
   '(' +
     '{Если белый король проникнет на с6, то партию не спасти: }' +
     ' 1...Kb8? 2.Kc6 Kc8 3.b5! ( { (поспешно } 3.d6? cxd6 4.Kxd6 b5! {)} )' +
-    ' 3...Kb8 4.d6 Kc8 { (остроумная ловушка!) }' +
+    ' 3...Kb8 {<br />} 4.d6 Kc8 { (остроумная ловушка!) }' +
     ' 5.Kd5! ( { (после } 5.dxc7? { получается пат) } ) ' +
-    ' 5...Kd7 6.dxc7 Kxc7 7.Ke6 { с выигрышем. ' +
+    ' 5...Kd7 6.dxc7 Kxc7 7.Ke6 { &nbsp;с выигрышем. ' +
     '<br/>Чёрных выручает временная жертва пешки:} ' +
   ')' +
 '2.dxc6+ Kc7 3.Ka6 Kxc6 4.Ka7 ' +
-  '( {(}4.b5+? Kc5 { , и выигрывают чёрные)} ) ' +
-'4...Kb5 5.Kb7 { с ничьей. }  *';
+  '( {<br />(}4.b5+? Kc5 { , и выигрывают чёрные)} ) ' +
+'{<br />}4...Kb5 5.Kb7 { с ничьей. }  *';
 
   window.loadPlayer({
     id: 1,
@@ -37,7 +37,7 @@
 
   document.querySelectorAll('.chessBoard__moves *').forEach(function (node) {
     if (!node.children.length && node.textContent) {
-      if (node.className === 'moveNumber') {
+      if ((node.className === 'moveNumber') && !node.textContent.startsWith('4.')  && !node.parentNode.textContent.startsWith('b5+?')) { //Фикс пробела между скобкой и номером хода
         node.textContent = ' ' + node.textContent;
       } else if (node.className === 'chessBoard__moveComment') {
         var r = node.textContent.split('').reverse().join('');
@@ -45,10 +45,10 @@
           node.textContent = ' ' + node.textContent;
         }
         if (!r.startsWith('.')) {
-          node.textContent += ' ';
+          // node.textContent += ' ';
         }
       } else if (node.className !== 'moveNotation') {
-        node.textContent += ' ';
+        // node.textContent += ' '; // Фикс пробела после номера хода
       }
     }
   });

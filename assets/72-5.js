@@ -17,9 +17,9 @@
   '( ' +
     '{Немедленный рывок пешки в ферзи ничего не даёт: } ' +
     '1.c6? Ke6 2.Kg6 Kd6 3.Kf6 Kxc6 4.Ke6 Kc7 5.Kd5 Kb7 6.Kc5 Kc7 7.Kxb5 Kb7! ' +
-    '{ с ничьей. Надо подвести короля к пешкам: } ' +
+    '{ &nbsp;с ничьей. Надо подвести короля к пешкам: } ' +
   ') ' +
-'1...Kf6 { &nbsp; (чёрный король отталкивает оппонента плечом) } ' +
+'1...Kf6 { &nbsp;(чёрный король отталкивает оппонента плечом) } ' +
 '2.Kh5 Kf5 3.Kh4! Kf6 ' +
   '(' +
     '{. Дальше «толкаться» не получается: } ' +
@@ -39,7 +39,7 @@
 
   document.querySelectorAll('.chessBoard__moves *').forEach(function (node) {
     if (!node.children.length && node.textContent) {
-      if (node.className === 'moveNumber') {
+      if ((node.className === 'moveNumber') && !(node.textContent ==='4...')) {
         node.textContent = ' ' + node.textContent;
       } else if (node.className === 'chessBoard__moveComment') {
         var r = node.textContent.split('').reverse().join('');
@@ -47,7 +47,7 @@
           // node.textContent = ' ' + node.textContent;
         }
         if (!r.startsWith('.')) {
-          node.textContent += ' ';
+          // node.textContent += ' ';
         }
       } else if (node.className !== 'moveNotation') {
         node.textContent += ' ';

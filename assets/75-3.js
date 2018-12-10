@@ -19,9 +19,9 @@
 '2...Kd7 3.Kd5 Kc7 4.Ke6 Kb7 5.Kd7 Ka8 6.Kc6 Ka7 7.Kc7 Ka8 8.Kxb6 Kb8 9.Ka6! ' +
 '{ Обходя патовую ловушку: } ' +
   '( 9.Kc6 Ka7 10.b6+? Ka8! 11.Kc7 ' +
-    '( { или } 11.b7+ Kb8 12.Kb6 { с ничьей.<br/>} ) ' +
+    '( { или } 11.b7+ Kb8 12.Kb6 { &nbsp;с ничьей.<br/>} ) ' +
   ') ' +
-  '9...Ka8 ( {(} 9...Kc7 10.Ka7 {)}) 10.b6 Kb8 11.b7 {, &nbsp;и&nbsp;белые выигрывают. }  *';
+  '9...Ka8 ( {(} 9...Kc7 10.Ka7 {)}) 10.b6 Kb8 11.b7 {, и&nbsp;белые выигрывают. }  *';
 
   window.loadPlayer({
     id: 1,
@@ -34,7 +34,7 @@
 
   document.querySelectorAll('.chessBoard__moves *').forEach(function (node) {
     if (!node.children.length && node.textContent) {
-      if (node.className === 'moveNumber') {
+      if ((node.className === 'moveNumber') && !(node.textContent === '9...')){ //Фикс пробела между скобкой и номером хода
         node.textContent = ' ' + node.textContent;
       } else if (node.className === 'chessBoard__moveComment') {
         var r = node.textContent.split('').reverse().join('');
@@ -42,7 +42,7 @@
           node.textContent = ' ' + node.textContent;
         }
         if (!r.startsWith('.')) {
-          node.textContent += ' ';
+          // node.textContent += ' ';
         }
       } else if (node.className !== 'moveNotation') {
         node.textContent += ' ';

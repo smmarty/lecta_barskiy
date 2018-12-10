@@ -28,14 +28,14 @@
     ') ' +
 '2.Ke7! ' +
     '(' +
-      '{ &nbsp;Ошибочно } 2.Kd7? Kb7 3.Kd6 Kb6 ' +
+      '{ Ошибочно } 2.Kd7? Kb7 3.Kd6 Kb6 ' +
     ')' +
     '(' +
       '{ или } 2.Kd8? Kb8 {.}' +
     ')' +
 '2...Ka6 ' +
     '(' +
-      '{ &nbsp;Не помогает } 2...Ka8 3.Kd6! Kb7 4.Kd7 { и т. д. } ' +
+      '{ Не помогает } 2...Ka8 {. } 3.Kd6! Kb7 4.Kd7 { и т. д. } ' +
     ')' +
 '3.Kd8! Kb7 4.Kd7 Kb6 5.Kc8 { с победой. }  *';
 
@@ -55,7 +55,7 @@
       } else if (node.className === 'chessBoard__moveComment') {
         var r = node.textContent.split('').reverse().join('');
         if (!node.textContent.startsWith(')') && !node.textContent.startsWith(',') && !node.textContent.startsWith('.') && !node.textContent.startsWith(';') && !node.textContent.startsWith(':') && !node.textContent.startsWith('!')) {
-          // node.textContent = ' ' + node.textContent;
+          node.textContent = ' ' + node.textContent;
         }
         if (!r.startsWith('.')) {
           node.textContent += ' ';

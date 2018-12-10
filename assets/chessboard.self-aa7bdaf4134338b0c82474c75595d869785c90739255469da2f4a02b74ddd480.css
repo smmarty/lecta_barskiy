@@ -247,7 +247,7 @@ body {
 }
 
 .chessBoard__player .chessBoard__col {
-  width: 50%;
+  width: 60%;
 }
 
 .chessBoard__player .chessBoard__headersRow .chessBoard__headersCol--board {
@@ -270,7 +270,7 @@ body {
 }
 */
 .chessBoard__player .chessBoard__move {
-  font-size: 16px;
+  font-size: 18px; /*16px*/
   color: black;
   font-weight: 700;
   line-height: 24px;
@@ -341,13 +341,14 @@ body {
 }
 
 .chessBoard__player .chessBoard__headers .chessBoard__headerItem {
-  flex-basis: 50%;
+  flex-basis: 90%; /*angri*/
 }
 
 .chessBoard__player .chessBoard__headers .chessBoard__headerMoveIndicator {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  flex-basis: 10%; /*angri*/
 }
 
 .chessBoard__player .chessBoard__headers .chessBoard__headerMoveIndicator:before {
@@ -409,14 +410,16 @@ body {
 
 html, body {
   background: #FFFFFF;
-  font-family: Circe, sans-serif;
+  font-family: Arial, sans-serif;
   min-width: auto;
   min-height: auto;
+  font-size: 18px;
+  letter-spacing: 0.7px;
 }
 
 
 .exercise {
-  width: 750px;
+  width: 800px; /*750px*/
   margin: 15px auto;
   padding: 15px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -472,4 +475,6 @@ html, body {
 
 .moveNotation {
   white-space: nowrap;
+    letter-spacing: 0.7px;
+    margin-left: 3px;
 }
